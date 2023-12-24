@@ -55,7 +55,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee findEmployee(String firstName, String lastName) {
         String employeeKey = getEmployeeKey(firstName, lastName);
-        //Employee employee = employees.get(getKey(firstName, lastName));
 
         if (!employees.containsKey(employeeKey)) {
             throw new EmployeeNotFoundException("Такого сотрудника нет в хранилище!");
